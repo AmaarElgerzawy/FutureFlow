@@ -1,0 +1,9 @@
+# Ignore virtual environments
+venv/
+.venv/
+
+# Node modules (for frontend)
+node_modules/
+
+# .env file (for sensitive information like API keys)
+.env

@@ -1,0 +1,121 @@
+{
+  "home_nav": "Home",
+  "services_nav": "Services",
+  "contact_nav": "Contact Us",
+  "title_nav": "FutureFlow",
+  "contact": {
+    "title": "Contact Us",
+    "contactInfo": "Contact Information",
+    "address": "Address",
+    "addressText": "Riyadh, Saudi Arabia",
+    "phone": "Phone",
+    "email": "Email",
+    "social": "Social Media",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "inquiryType": "Inquiry Type",
+    "general": "General Inquiry",
+    "sales": "Sales",
+    "support": "Technical Support",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "home": {
+    "headline": "FutureFlow",
+    "subtitle": "Your leading company in automation and software solutions",
+    "discoverServices": "Discover Our Services",
+    "mainServices": "Our Main Services",
+    "whyUs": "Why Choose Us?",
+    "ctaTitle": "Ready to go digital?",
+    "ctaButton": "Start now with a free consultation",
+    "services": [
+      {
+        "title": "Smart Automation",
+        "description": "Integrated automation solutions for operations management"
+      },
+      {
+        "title": "Software Development",
+        "description": "Custom systems that meet your unique business needs"
+      },
+      {
+        "title": "Technical Consulting",
+        "description": "Experts in system analysis and process improvement"
+      }
+    ],
+    "features": [
+      {
+        "title": "Compliant with Regulations",
+        "description": "Solutions tailored for the Saudi market"
+      },
+      {
+        "title": "Guaranteed Security",
+        "description": "Your data protection is our top priority"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Customer service around the clock"
+      }
+    ]
+  },
+  "title": "Our Specialized Services",
+  "features_title": "Main Features:",
+  "supported_platforms": "Supported Platforms:",
+  "customization_options": "Customization Options:",
+  "pricing_plans": "Pricing Plans",
+  "choose_plan": "Choose Plan",
+  "services": {
+    "compliance": "Compliant with the Saudi Data and AI Authority (SDAIA)",
+    "automation_services": "Automation Services",
+    "process_analysis": "Operational Process Analysis",
+    "workflow_design": "Automated Workflow Design",
+    "integration": "System Integration",
+    "software_development": "Software Development",
+    "advanced_web_apps": "Advanced Web Applications",
+    "mobile_apps": "Mobile Applications (iOS & Android)",
+    "custom_systems": "Custom Management Systems",
+    "business_intelligence": "Business Intelligence Solutions",
+    "tech_consulting": "Tech Consulting",
+    "cybersecurity_strategies": "Cybersecurity Strategies",
+    "cloud_solutions": "Cloud Solutions (AWS, Azure)",
+    "digital_transformation": "Digital Transformation Plans",
+    "infrastructure_optimization": "Infrastructure Optimization",
+    "tech_support": "Technical Support",
+    "technical_support_24_7": "24/7 Technical Support",
+    "data_recovery": "Data Recovery",
+    "secure_backups": "Secure Backups",
+    "system_maintenance": "System Maintenance",
+    "small_businesses": "Small Businesses",
+    "medium_businesses": "Medium Enterprises",
+    "large_enterprises": "Large Corporations"
+  },
+  "plans": {
+    "basic_plan": "Basic Plan",
+    "support_8_hours": "8 Hours Support",
+    "automation_5": "5 Automations",
+    "monthly_maintenance": "Monthly Maintenance",
+    "mid_plan": "Mid Plan",
+    "support_24_7": "24/7 Support",
+    "automation_15": "15 Automations",
+    "basic_web_app": "Basic Web App",
+    "premium_plan": "Premium Plan",
+    "dedicated_support": "Dedicated Support",
+    "integrated_solutions": "Integrated Solutions",
+    "mobile_apps": "Mobile Apps",
+    "basic_price": "5000 SAR",
+    "mid_price": "5000 SAR",
+    "premium_price": "5000 SAR"
+  },
+  "footer": {
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "services": "Our Services",
+    "automation": "Automation Services",
+    "development": "Software Development",
+    "consulting": "Tech Consulting",
+    "contact": "Contact Us",
+    "follow": "Follow Us",
+    "rights": "All Rights Reserved"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "home_nav": "الرئيسية",
+  "services_nav": "الخدمات",
+  "contact_nav": "تواصل معنا",
+  "title_nav": "FutureFlow",
+  "contact": {
+    "title": "تواصل معنا",
+    "contactInfo": "معلومات التواصل",
+    "address": "العنوان",
+    "addressText": "الرياض، المملكة العربية السعودية",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "social": "وسائل التواصل الاجتماعي",
+    "fullName": "الاسم الكامل",
+    "emailAddress": "البريد الإلكتروني",
+    "phoneNumber": "رقم الجوال",
+    "inquiryType": "نوع الاستفسار",
+    "general": "استفسار عام",
+    "sales": "مبيعات",
+    "support": "دعم فني",
+    "message": "الرسالة",
+    "send": "إرسال الرسالة"
+  },
+  "home": {
+    "headline": "FutureFlow",
+    "subtitle": "شركتك الرائدة في حلول الأتمتة وتطوير البرمجيات",
+    "discoverServices": "اكتشف خدماتنا",
+    "mainServices": "خدماتنا الرئيسية",
+    "whyUs": "لماذا نتميز؟",
+    "ctaTitle": "مستعد للتحول الرقمي؟",
+    "ctaButton": "ابدأ الآن مع استشارة مجانية",
+    "services": [
+      {
+        "title": "الأتمتة الذكية",
+        "description": "حلول أتمتة متكاملة لإدارة العمليات التشغيلية"
+      },
+      {
+        "title": "تطوير البرمجيات",
+        "description": "أنظمة مخصصة تلبي احتياجات عملك الفريدة"
+      },
+      {
+        "title": "الاستشارات التقنية",
+        "description": "خبراء في تحليل النظم وتحسين العمليات"
+      }
+    ],
+    "features": [
+      {
+        "title": "متوافق مع اللوائح",
+        "description": "حلول مصممة خصيصًا للسوق السعودي"
+      },
+      {
+        "title": "أمان مضمون",
+        "description": "حماية بياناتك أولويتنا القصوى"
+      },
+      {
+        "title": "دعم فني 24/7",
+        "description": "خدمة عملاء على مدار الساعة"
+      }
+    ]
+  },
+  "title": "خدماتنا المتخصصة",
+  "features_title": "المميزات الرئيسية:",
+  "supported_platforms": "المنصات المدعومة:",
+  "customization_options": "خيارات التخصيص:",
+  "pricing_plans": "خطط الأسعار",
+  "choose_plan": "اختر الخطة",
+  "services": {
+    "compliance": "متوافق مع نظام الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA)",
+    "automation_services": "خدمات الأتمتة",
+    "process_analysis": "تحليل العمليات التشغيلية",
+    "workflow_design": "تصميم سير العمل الآلي",
+    "integration": "التكامل مع الأنظمة الحالية",
+    "software_development": "تطوير البرمجيات",
+    "advanced_web_apps": "تطبيقات ويب متقدمة",
+    "mobile_apps": "تطبيقات جوال (iOS و Android)",
+    "custom_systems": "أنظمة إدارة مخصصة",
+    "business_intelligence": "حلول Business Intelligence",
+    "tech_consulting": "الاستشارات التقنية",
+    "cybersecurity_strategies": "استراتيجيات الأمن السيبراني",
+    "cloud_solutions": "الحلول السحابية (AWS, Azure)",
+    "digital_transformation": "خطط التحول الرقمي",
+    "infrastructure_optimization": "تحسين البنية التحتية",
+    "tech_support": "خدمات الدعم الفني",
+    "technical_support_24_7": "دعم فني 24/7",
+    "data_recovery": "استعادة البيانات",
+    "secure_backups": "النسخ الاحتياطي الآمن",
+    "system_maintenance": "صيانة الأنظمة",
+    "small_businesses": "الشركات الصغيرة",
+    "medium_businesses": "الشركات المتوسطة",
+    "large_enterprises": "الشركات الكبيرة"
+  },
+  "plans": {
+    "basic_plan": "الخطة الأساسية",
+    "support_8_hours": "دعم 8 ساعات",
+    "automation_5": "5 عمليات أتمتة",
+    "monthly_maintenance": "صيانة شهرية",
+    "basic_price": "5000 ر.س",
+    "mid_plan": "الخطة المتوسطة",
+    "support_24_7": "دعم 24/7",
+    "automation_15": "15 عملية أتمتة",
+    "basic_web_app": "تطبيق ويب أساسي",
+    "premium_plan": "الخطة الشاملة",
+    "dedicated_support": "دعم فني مخصص",
+    "integrated_solutions": "حلول متكاملة",
+    "mobile_apps": "تطبيقات جوال",
+    "mid_price": "5000 ر.س",
+    "premium_price": "5000 ر.س"
+  },
+  "footer": {
+    "about": "من نحن",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة",
+    "services": "خدماتنا",
+    "automation": "خدمات الأتمتة",
+    "development": "تطوير البرمجيات",
+    "consulting": "الاستشارات التقنية",
+    "contact": "اتصل بنا",
+    "follow": "تابعنا",
+    "rights": "جميع الحقوق محفوظة"
+  }
+}
+
+
