@@ -1,101 +1,154 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ isDarkMode }) => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-glassBg backdrop-blur-lg py-12 px-4 md:px-8 mt-20">
+    <footer
+      className={`py-12 px-4 sm:px-6 lg:px-8 ${
+        isDarkMode
+          ? "bg-darkBg border-darkSecondary"
+          : "bg-lightSecondary border-gray-200"
+      }`}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
           {/* About Section */}
-          <div className="col-span-2 md:col-span-1 text-center md:text-left">
-            <h4 className="text-neonBlue text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h4
+              className={`text-lg font-semibold ${
+                isDarkMode ? "text-accent" : "text-lightAccent"
+              }`}>
               {t("footer.about")}
             </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="/privacy"
-                  className="hover:text-neonBlue transition-colors duration-300">
-                  {t("footer.privacy")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/terms"
-                  className="hover:text-neonBlue transition-colors duration-300">
-                  {t("footer.terms")}
-                </a>
-              </li>
+            <ul className="space-y-2">
+              {["privacy", "terms"].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`/${item}`}
+                    className={`text-sm ${
+                      isDarkMode
+                        ? "text-gray-400 hover:text-accent"
+                        : "text-gray-600 hover:text-lightAccent"
+                    } transition-colors duration-200`}>
+                    {t(`footer.${item}`)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services Section */}
-          <div className="text-center md:text-left">
-            <h4 className="text-neonBlue text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h4
+              className={`text-lg font-semibold ${
+                isDarkMode ? "text-accent" : "text-lightAccent"
+              }`}>
               {t("footer.services")}
             </h4>
-            <ul className="space-y-3">
-              <li>{t("footer.automation")}</li>
-              <li>{t("footer.development")}</li>
-              <li>{t("footer.consulting")}</li>
+            <ul className="space-y-2">
+              {["automation", "development", "consulting"].map((service) => (
+                <li
+                  key={service}
+                  className={`text-sm ${
+                    isDarkMode ? "text-gray-400" : "text-gray-600"
+                  }`}>
+                  {t(`footer.${service}`)}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Section */}
-          <div className="text-center md:text-left">
-            <h4 className="text-neonBlue text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h4
+              className={`text-lg font-semibold ${
+                isDarkMode ? "text-accent" : "text-lightAccent"
+              }`}>
               {t("footer.contact")}
             </h4>
-            <ul className="space-y-3">
-              <li>info@futureflow.com</li>
-              <li>+966 50 000 0000</li>
-              <li>الرياض، السعودية</li>
+            <ul className="space-y-2">
+              <li
+                className={`text-sm ${
+                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                }`}>
+                <a
+                  href="mailto:info@futureflow.com"
+                  className="hover:underline">
+                  info@futureflow.com
+                </a>
+              </li>
+              <li
+                className={`text-sm ${
+                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                }`}>
+                <a href="tel:+966500000000" className="hover:underline">
+                  +966 50 000 0000
+                </a>
+              </li>
+              <li
+                className={`text-sm ${
+                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                }`}>
+                الرياض، السعودية
+              </li>
             </ul>
           </div>
 
           {/* Social Media */}
-          <div className="col-span-2 md:col-span-1 text-center md:text-left">
-            <h4 className="text-neonBlue text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h4
+              className={`text-lg font-semibold ${
+                isDarkMode ? "text-accent" : "text-lightAccent"
+              }`}>
               {t("footer.follow")}
             </h4>
-            <div className="flex justify-center md:justify-start gap-4">
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-full hover:bg-neonBlue transition-colors">
-                {/* Add social media icons here */}
-                <span className="text-white">LinkedIn</span>
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-full hover:bg-neonBlue transition-colors">
-                <span className="text-white">Twitter</span>
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-full hover:bg-neonBlue transition-colors">
-                <span className="text-white">Facebook</span>
-              </a>
+            <div className="flex flex-wrap gap-2">
+              {["LinkedIn", "Twitter", "Facebook"].map((platform) => (
+                <a
+                  key={platform}
+                  href="#"
+                  className={`px-4 py-2 rounded-lg text-sm flex items-center ${
+                    isDarkMode
+                      ? "bg-darkSecondary text-gray-300 hover:bg-darkSecondary/80"
+                      : "bg-white text-gray-600 hover:bg-gray-100"
+                  } transition-colors duration-200`}>
+                  {platform}
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-gray-700 mt-12 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center order-last md:order-first">
+        <div
+          className={`border-t ${
+            isDarkMode ? "border-darkSecondary" : "border-gray-200"
+          } mt-8 pt-8`}>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+            <p
+              className={`text-sm ${
+                isDarkMode ? "text-gray-500" : "text-gray-400"
+              }`}>
               © {new Date().getFullYear()} FutureFlow. {t("footer.rights")}
             </p>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/privacy"
-                className="text-gray-400 hover:text-neonBlue text-sm">
+                className={`text-sm ${
+                  isDarkMode
+                    ? "text-gray-500 hover:text-accent"
+                    : "text-gray-400 hover:text-lightAccent"
+                } transition-colors duration-200`}>
                 {t("footer.privacy")}
               </a>
               <a
                 href="/terms"
-                className="text-gray-400 hover:text-neonBlue text-sm">
+                className={`text-sm ${
+                  isDarkMode
+                    ? "text-gray-500 hover:text-accent"
+                    : "text-gray-400 hover:text-lightAccent"
+                } transition-colors duration-200`}>
                 {t("footer.terms")}
               </a>
             </div>

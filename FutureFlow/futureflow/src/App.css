@@ -1,55 +1,27 @@
-/* Ensure HTML/body allows scrolling */
-/* Optional: For section snapping */
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+.dark {
+  --bg-primary: #0F0B2A;
+  --bg-secondary: #1F1B3A;
+  --text-primary: #E2E8F0;
+  --text-secondary: #B08FEC;
+  --accent-primary: #FF6A4D;
+  --border-color: #2A1F47;
 }
 
-section {
-  scroll-snap-align: start;
+.light {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --accent-primary: #C2410C;
+  --border-color: #E2E8F0;
 }
 
-/* App.css */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  position: relative;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.background-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.content-wrapper {
-  height: auto;
-  flex: 1;
-  position: relative;
-  z-index: 1;
-  background-color: rgba(10, 25, 47, 0.85);
-}
-
-.app-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.video-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.background-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.neon-text {
+  text-shadow: 0 0 8px var(--accent-primary);
 }

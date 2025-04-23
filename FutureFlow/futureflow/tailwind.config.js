@@ -1,20 +1,24 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        neonBlue: "#00E5FF",
-        neonPurple: "#8A2BE2",
-        darkBg: "#0A0A0A",
-        glassBg: "rgba(255, 255, 255, 0.1)",
-        arabicText: "#1a365d",
-      },
-      backdropBlur: {
-        xs: "2px",
-      },
-      fontFamily: {
-        arabic: ["Cairo", "sans-serif"],
-        english: ["Inter", "sans-serif"],
+        // Dark theme
+        darkBg: "#0F0B2A",
+        darkSecondary: "#1F1B3A",
+        darkAccent: "#FF6A4D",
+        darkText: "#E2E8F0",
+
+        // Light theme
+        lightBg: "#F8FAFC",
+        lightSecondary: "#FFFFFF",
+        lightAccent: "#C2410C",
+        lightText: "#1E293B",
+
+        // Common colors
+        purpleLight: "#B08FEC",
+        neonBlue: "#3B82F6",
       },
     },
   },

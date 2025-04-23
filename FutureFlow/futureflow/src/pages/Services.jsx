@@ -83,17 +83,36 @@ const pricingPlans = [
   },
 ];
 
-const Services = () => {
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const Services = ({ id, isDarkMode }) => {
   const { t } = useTranslation();
 
   return (
     <section
-      id="services"
-      className="min-h-screen py-20 px-4 md:px-8 bg-[#0a192f]/95">
+      id={id}
+      className={`min-h-screen py-16 px-4 md:px-8 text-center pt-20 ${
+        isDarkMode ? "bg-darkSecondary" : "bg-lightSecondary"
+      }`}>
       <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-4xl md:text-5xl font-bold text-center text-neonBlue mb-16">
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        className={`text-4xl md:text-5xl font-bold text-center ${
+          isDarkMode ? "text-accent" : "text-lightAccent"
+        } mb-16`}>
         {t("title")}
       </motion.h2>
 
@@ -101,28 +120,42 @@ const Services = () => {
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-glassBg backdrop-blur-lg rounded-xl p-8 shadow-xl">
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index}
+            variants={fadeIn}
+            className={`${
+              isDarkMode ? "bg-darkBg" : "bg-lightBg"
+            } rounded-2xl overflow-hidden shadow-xl border ${
+              isDarkMode ? "border-accent/20" : "border-lightAccent/20"
+            } p-8`}>
             <div className="flex items-center gap-4 mb-6">
               <span className="text-4xl">{service.icon}</span>
-              <h3 className="text-2xl font-bold text-neonBlue">
+              <h3 className={`text-2xl font-bold ${
+                isDarkMode ? "text-accent" : "text-lightAccent"
+              }`}>
                 {t(service.category)}
               </h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-xl font-semibold mb-4">
+                <h4 className={`text-xl font-semibold ${
+                  isDarkMode ? "text-accent" : "text-lightAccent"
+                } mb-4`}>
                   {t("features_title")}
                 </h4>
                 <ul className="space-y-3">
                   {service.subservices.map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-2 text-gray-300">
-                      <span className="text-neonBlue">•</span>
+                      className={`flex items-center gap-2 ${
+                        isDarkMode ? "text-purpleLight" : "text-gray-600"
+                      }`}>
+                      <span className={`${
+                        isDarkMode ? "text-accent" : "text-lightAccent"
+                      }`}>•</span>
                       {t(item)}
                     </li>
                   ))}
@@ -132,15 +165,44 @@ const Services = () => {
               <div className="space-y-6">
                 {service.platforms && (
                   <div>
-                    <h4 className="text-xl font-semibold mb-3">
+                    <h4 className={`text-xl font-semibold ${
+                      isDarkMode ? "text-accent" : "text-lightAccent"
+                    } mb-3`}>
                       {t("supported_platforms")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {service.platforms.map((platform, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 bg-gray-800 rounded-full text-sm">
+                          className={`px-3 py-1 rounded-full text-sm ${
+                            isDarkMode 
+                              ? "bg-darkSecondary text-purpleLight"
+                              : "bg-gray-100 text-gray-700"
+                          }`}>
                           {platform}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {service.technologies && (
+                  <div>
+                    <h4 className={`text-xl font-semibold ${
+                      isDarkMode ? "text-accent" : "text-lightAccent"
+                    } mb-3`}>
+                      {t("technologies")}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className={`px-3 py-1 rounded-full text-sm ${
+                            isDarkMode 
+                              ? "bg-darkSecondary text-purpleLight"
+                              : "bg-gray-100 text-gray-700"
+                          }`}>
+                          {tech}
                         </span>
                       ))}
                     </div>
@@ -149,14 +211,20 @@ const Services = () => {
 
                 {service.customization && (
                   <div>
-                    <h4 className="text-xl font-semibold mb-3">
+                    <h4 className={`text-xl font-semibold ${
+                      isDarkMode ? "text-accent" : "text-lightAccent"
+                    } mb-3`}>
                       {t("customization_options")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {service.customization.map((size, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 bg-gray-800 rounded-full text-sm">
+                          className={`px-3 py-1 rounded-full text-sm ${
+                            isDarkMode 
+                              ? "bg-darkSecondary text-purpleLight"
+                              : "bg-gray-100 text-gray-700"
+                          }`}>
                           {t(size)}
                         </span>
                       ))}
@@ -167,8 +235,14 @@ const Services = () => {
             </div>
 
             {service.compliance && (
-              <div className="mt-6 p-4 bg-green-900/20 rounded-lg border border-green-500">
-                <p className="text-green-400 flex items-center gap-2">
+              <div className={`mt-6 p-4 rounded-lg border ${
+                isDarkMode 
+                  ? "bg-green-900/20 border-green-500"
+                  : "bg-green-100 border-green-400"
+              }`}>
+                <p className={`flex items-center gap-2 ${
+                  isDarkMode ? "text-green-400" : "text-green-700"
+                }`}>
                   <span>✅</span>
                   {t(service.compliance)}
                 </p>
@@ -178,35 +252,55 @@ const Services = () => {
         ))}
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
           className="mt-24">
-          <h3 className="text-3xl font-bold text-center text-neonBlue mb-12">
+          <h3 className={`text-3xl font-bold text-center ${
+            isDarkMode ? "text-accent" : "text-lightAccent"
+          } mb-12`}>
             {t("pricing_plans")}
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-glassBg backdrop-blur-lg p-6 rounded-xl border border-gray-700 hover:border-neonBlue transition-all">
-                <h4 className="text-2xl font-bold text-center mb-4">
+                custom={index}
+                variants={fadeIn}
+                className={`${
+                  isDarkMode ? "bg-darkBg" : "bg-lightBg"
+                } rounded-2xl overflow-hidden shadow-xl border ${
+                  isDarkMode ? "border-accent/20" : "border-lightAccent/20"
+                } p-6 hover:scale-[1.03] transition-transform`}>
+                <h4 className={`text-2xl font-bold text-center ${
+                  isDarkMode ? "text-accent" : "text-lightAccent"
+                } mb-4`}>
                   {t(plan.name)}
                 </h4>
-                <p className="text-3xl text-center text-neonBlue mb-6">
+                <p className={`text-3xl text-center ${
+                  isDarkMode ? "text-accent" : "text-lightAccent"
+                } mb-6`}>
                   {t(plan.price)}
                 </p>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="text-center text-gray-300">
+                    <li key={i} className={`text-center ${
+                      isDarkMode ? "text-purpleLight" : "text-gray-600"
+                    }`}>
                       ✓ {t(feature)}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-2 bg-neonBlue text-darkBg rounded-lg hover:bg-white transition-colors">
+                <button className={`w-full py-2 ${
+                  isDarkMode 
+                    ? "bg-accent hover:bg-accent/90" 
+                    : "bg-lightAccent hover:bg-lightAccent/90"
+                } text-white rounded-lg transition-colors`}>
                   {t("choose_plan")}
                 </button>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
